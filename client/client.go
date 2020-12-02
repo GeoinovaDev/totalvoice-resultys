@@ -24,6 +24,7 @@ type ProtocolResponse struct {
 // CompostoAction ...
 type CompostoAction struct {
 	Name      string            `json:"acao"`
+	Option    string            `json:"opcao"`
 	Parameter map[string]string `json:"acao_dados"`
 }
 
