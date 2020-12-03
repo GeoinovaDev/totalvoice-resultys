@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"net/http"
+	"os"
 	"strings"
 	"sync"
 
@@ -84,6 +85,8 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	buf.ReadFrom(r.Body)
 	body := buf.String()
 
+	saveInFile("response.webhook.json", body)
+
 	go s.process(body)
 
 	w.Write([]byte("ok"))
@@ -122,5 +125,20 @@ func (s *Server) process(body string) {
 		p := promise.New()
 		s.hooks[response.ID] = p
 		s.hooks[response.ID].Resolve(response)
+	}
+}
+
+func saveInFile(filename string, content string) {
+	f, err := os.Create(filename)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	_, err = f.WriteString(content)
+	if err != nil {
+		fmt.Println(err)
+		f.Close()
+		return
 	}
 }
