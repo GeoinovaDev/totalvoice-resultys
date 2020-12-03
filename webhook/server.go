@@ -89,7 +89,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	go s.process(body)
 
-	w.Write([]byte("ok"))
+	w.Write([]byte(`{"status": "ok", "code": 200}`))
 }
 
 func (s *Server) process(body string) {
