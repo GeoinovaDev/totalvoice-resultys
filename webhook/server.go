@@ -85,7 +85,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	buf.ReadFrom(r.Body)
 	body := buf.String()
 
-	saveInFile("/tmp/response.webhook.json", body)
+	// saveInFile("/tmp/response.webhook.json", body)
 
 	go s.process(body)
 
