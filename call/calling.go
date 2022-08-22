@@ -3,8 +3,8 @@ package call
 import (
 	"time"
 
-	"git.resultys.com.br/sdk/totalvoice-golang/payload"
-	"git.resultys.com.br/sdk/totalvoice-golang/webhook"
+	"github.com/GeoinovaDev/totalvoice-resultys/payload"
+	"github.com/GeoinovaDev/totalvoice-resultys/webhook"
 )
 
 // Call ...

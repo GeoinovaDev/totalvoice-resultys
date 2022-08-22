@@ -1,9 +1,9 @@
 package totalvoice
 
 import (
-	"git.resultys.com.br/sdk/totalvoice-golang/call"
-	"git.resultys.com.br/sdk/totalvoice-golang/client"
-	"git.resultys.com.br/sdk/totalvoice-golang/webhook"
+	"github.com/GeoinovaDev/totalvoice-resultys/call"
+	"github.com/GeoinovaDev/totalvoice-resultys/client"
+	"github.com/GeoinovaDev/totalvoice-resultys/webhook"
 )
 
 // TotalVoice ...

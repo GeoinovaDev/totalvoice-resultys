@@ -8,10 +8,10 @@ import (
 	"strings"
 	"sync"
 
-	"git.resultys.com.br/lib/lower/convert/decode"
-	"git.resultys.com.br/lib/lower/exception"
-	"git.resultys.com.br/lib/lower/promise"
-	"git.resultys.com.br/sdk/totalvoice-golang/payload"
+	"github.com/GeoinovaDev/lower-resultys/convert/decode"
+	"github.com/GeoinovaDev/lower-resultys/exception"
+	"github.com/GeoinovaDev/lower-resultys/promise"
+	"github.com/GeoinovaDev/totalvoice-resultys/payload"
 )
 
 // Server struct
